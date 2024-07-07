@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./pkgs.nix
+    # ./derivations
+  ];
+}
