@@ -3,15 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      #inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovim-flake = {
-      url = "github:notashelf/neovim-flake";
+    nvf = {
+      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -35,13 +33,11 @@
     self,
     nixpkgs,
     home-manager,
-    neovim-flake,
+    nvf,
     catppuccin,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    specialArgs = {inherit inputs;};
-    # home-manager.extraSpecialArgs = { inherit inputs; };
     pkgs = import nixpkgs {
       inherit system;
       config.allowUnfree = true;
@@ -61,7 +57,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.itzreakduck.imports = [
               ./home.nix
-              #  neovim-flake.homeManagerModules.default
+              nvf.homeManagerModules.default
               catppuccin.homeManagerModules.catppuccin
             ];
             home-manager.extraSpecialArgs = {
@@ -76,10 +72,9 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
       modules = [
-        # neovim-flake.homeManagerModules.default
+        nvf.homeManagerModules.default
         catppuccin.homeManagerModules.catppuccin
         ./home.nix
-        # your home-manager configuration, probably where you will want to add programs.neovim-flake options
       ];
     };
   };

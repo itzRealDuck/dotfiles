@@ -1,16 +1,12 @@
 {
-  inputs,
   options,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 with options; {
-  imports = [
-    inputs.neovim-flake.homeManagerModules.default
-  ];
-
-  programs.neovim-flake = {
+  programs.nvf = {
     enable = true;
     # your settings need to go into the settings attribute set
     # most settings are documented in the appendix
