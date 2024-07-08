@@ -1,11 +1,4 @@
-{
-  options,
-  lib,
-  pkgs,
-  inputs,
-  ...
-}:
-with options; {
+{pkgs, ...}: {
   programs.nvf = {
     enable = true;
     # your settings need to go into the settings attribute set

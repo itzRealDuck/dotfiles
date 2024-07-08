@@ -1,5 +1,4 @@
-{options, ...}:
-with options; {
+{...}: {
   services.xserver = {
     desktopManager = {
       gnome = {

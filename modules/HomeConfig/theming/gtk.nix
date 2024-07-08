@@ -1,9 +1,4 @@
-{
-  pkgs,
-  options,
-  ...
-}:
-with options; {
+{pkgs, ...}: {
   gtk = {
     enable = true;
     theme = {

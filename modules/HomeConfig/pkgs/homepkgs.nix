@@ -1,10 +1,8 @@
 {
   pkgs,
-  options,
   lib,
   ...
-}:
-with options; {
+}: {
   imports = [../overlays];
 
   home.packages = with pkgs; [

@@ -1,14 +1,4 @@
-{
-  pkgs,
-  options,
-  inputs,
-  ...
-}:
-with options; {
-  #  imports = [
-  #   inputs.catppuccin.homeManagerModules.catppuccin
-  # ];
-
+{pkgs, ...}: {
   qt = {
     enable = true;
     style.name = "kvantum";

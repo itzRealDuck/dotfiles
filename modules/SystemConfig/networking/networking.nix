@@ -1,9 +1,4 @@
-{
-  options,
-  pkgs,
-  ...
-}:
-with options; {
+{pkgs, ...}: {
   networking.hostName = "nixos"; # hostname
   #  networking.wireless.enable = true; enable wirless
   networking.networkmanager.enable = true;

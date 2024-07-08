@@ -1,10 +1,8 @@
 {
-  options,
   pkgs,
   lib,
   ...
-}:
-with options; {
+}: {
   programs.starship = {
     enable = true;
     package = pkgs.starship;

@@ -1,13 +1,4 @@
-{
-  inputs,
-  pkgs,
-  options,
-  ...
-}:
-with options; {
-  imports = [
-    inputs.ags.homeManagerModules.default
-  ];
+{pkgs, ...}: {
   programs.ags = {
     enable = true;
 

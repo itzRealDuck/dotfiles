@@ -1,9 +1,4 @@
-{
-  options,
-  pkgs,
-  ...
-}:
-with options; {
+{pkgs, ...}: {
   nixpkgs.config = {
     allowBroken = true;
     allowUnfreePredicate = _: true;

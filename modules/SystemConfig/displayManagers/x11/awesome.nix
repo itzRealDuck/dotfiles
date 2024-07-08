@@ -1,11 +1,9 @@
 {
-  options,
   inputs,
   pkgs,
   lib,
   ...
-}:
-with options; {
+}: {
   services.xserver.windowManager = {
     awesome = {
       enable = true;

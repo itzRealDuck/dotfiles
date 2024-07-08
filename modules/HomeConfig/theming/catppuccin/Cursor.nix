@@ -1,12 +1,5 @@
-{
-  pkgs,
-  options,
-  inputs,
-  ...
-}:
-with options; {
+{pkgs, ...}: {
   catppuccin.pointerCursor = {
     enable = true;
-    # accent = "green";
   };
 }

@@ -1,9 +1,4 @@
-{
-  pkgs,
-  options,
-  ...
-}:
-with options; {
+{pkgs, ...}: {
   users.users.itzreakduck = {
     isNormalUser = true;
     description = "ItzReakDuck";

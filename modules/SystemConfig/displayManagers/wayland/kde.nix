@@ -1,8 +1,4 @@
-{
-  pkgs,
-  options,
-  ...
-}: {
+{pkgs, ...}: {
   services.desktopManager = {
     plasma6 = {
       enable = true;

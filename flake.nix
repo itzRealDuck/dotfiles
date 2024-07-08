@@ -35,6 +35,7 @@
     home-manager,
     nvf,
     catppuccin,
+    ags,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -59,6 +60,7 @@
               ./home.nix
               nvf.homeManagerModules.default
               catppuccin.homeManagerModules.catppuccin
+              ags.homeManagerModules.default
             ];
             home-manager.extraSpecialArgs = {
               inherit inputs;
