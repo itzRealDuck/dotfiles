@@ -10,5 +10,6 @@
     ./users
     ./nixpkgsopt.nix
     ./syspkgs
+    ./overlays
   ];
 }

@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-f2k.url = "github:fortuneteller2k/nixpkgs-f2k";
 
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
