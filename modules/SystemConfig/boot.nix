@@ -4,4 +4,10 @@
   boot.loader.grub.useOSProber = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.grub.catppuccin.enable = true;
+  boot.plymouth = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+    };
+  };
 }
