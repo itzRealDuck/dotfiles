@@ -11,5 +11,7 @@
     ./nixpkgsopt.nix
     ./syspkgs
     ./overlays
+    ./gaming
+    ./nh.nix
   ];
 }

@@ -26,9 +26,7 @@
     lxappearance
     font-awesome
     pfetch
-    #zsh
     starship
-    catppuccin-gtk
     ddnet
     fastfetch
     python3
@@ -43,7 +41,6 @@
     (pkgs.callPackage ./derivations/gnuhello.nix {}).hello
     vulkan-tools
     wofi
-    alacritty
     swww
     rofi
     brave
@@ -62,7 +59,6 @@
     libGL
     docker
     picom
-    vencord
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
