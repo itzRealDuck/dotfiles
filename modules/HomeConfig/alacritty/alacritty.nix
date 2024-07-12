@@ -1,12 +1,5 @@
-{
-  pkgs,
-  lib,
-  config,
-  options,
-  ...
-}: let
-in {
-  imports = [(import ./options.nix {inherit pkgs lib config options;})];
+{pkgs, ...}: {
+  imports = [./options.nix];
   programs.alacritty = {
     enable = true;
     package = pkgs.alacritty;
