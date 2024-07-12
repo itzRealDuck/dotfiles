@@ -4,15 +4,28 @@
   lib,
   config,
   ...
-}: {
+}: let
+  inherit (lib) mkIf mkMerge mkEnableOption;
+in {
   options.programs.alacritty = {
     oxocarbon = {
-      enable = lib.mkEnableOption "OxoCarbon Theme for Alacritty";
+      enable = mkEnableOption "OxoCarbon Theme for Alacritty";
+    };
+    nord = {
+      enable = mkEnableOption "Nord Theme for Alacritty";
     };
   };
-  config = config.programs.alacritty.enable {
-    programs.alacritty.settings = {
-      colors.primary = "#FF0000";
-    };
-  };
+  config = mkMerge [
+    (mkIf config.programs.alacritty.oxocarbon.enable
+      {
+        programs.alacritty.settings = {
+          colors.primary.background = "#171717";
+        };
+      })
+    (mkIf config.programs.alacritty.nord.enable {
+      programs.alacritty.settings = {
+        colors.primary.background = "#3B4252";
+      };
+    })
+  ];
 }
