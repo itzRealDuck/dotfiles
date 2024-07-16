@@ -21,7 +21,6 @@
     prismlauncher
     nerdfonts
     xfce.thunar
-    floorp
     kazam
     lxappearance
     font-awesome
@@ -59,6 +58,7 @@
     libGL
     docker
     picom
+    (pkgs.callPackage ./derivations/appimages {}).cheatbreaker
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.

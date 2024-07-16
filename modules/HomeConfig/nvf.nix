@@ -82,11 +82,6 @@
         highlight-undo.enable = true;
         indentBlankline = {
           enable = true;
-          fillChar = null;
-          eolChar = null;
-          scope = {
-            enabled = true;
-          };
         };
         cursorline = {
           enable = true;

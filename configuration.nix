@@ -37,7 +37,11 @@
   system.stateVersion = "23.05"; # Did you read the c
 
   nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = "experimental-features = nix-command flakes";
+    settings = {
+      experimental-features = ["nix-command" "flakes"];
+      trusted-public-keys = [
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      ];
+    };
   };
 }
