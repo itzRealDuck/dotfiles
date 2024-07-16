@@ -38,16 +38,13 @@
     ags,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
+    system = null;
+
     lib = nixpkgs.lib;
   in {
     nixosConfigurations = {
       itzreakduck = lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs lib;};
         inherit system;
         modules = [
           ./configuration.nix
@@ -66,6 +63,7 @@
               inherit inputs;
             };
           }
+          {nixpkgs.hostPlatform = "x86_64-linux";}
         ];
       };
     };
