@@ -59,6 +59,7 @@
     docker
     picom
     (pkgs.callPackage ./derivations/appimages {}).cheatbreaker
+    (pkgs.callPackage ./derivations/appimages {}).badlion
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
