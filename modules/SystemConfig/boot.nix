@@ -10,4 +10,5 @@
       enable = true;
     };
   };
+  boot.kernelParams = ["quiet" "splash"];
 }

@@ -13,5 +13,6 @@
     ./overlays
     ./gaming
     ./nh.nix
+    ./graphics.nix
   ];
 }
