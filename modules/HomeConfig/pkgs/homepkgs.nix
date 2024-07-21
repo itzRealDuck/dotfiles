@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  inputs,
   ...
 }: {
   imports = [../overlays];
@@ -60,6 +61,7 @@
     picom
     (pkgs.callPackage ./derivations/appimages {}).cheatbreaker
     (pkgs.callPackage ./derivations/appimages {}).badlion
+    inputs.alejandra.defaultPackage.${pkgs.system}
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.

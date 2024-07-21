@@ -10,5 +10,6 @@
     ./fastfetch.nix
     ./shells
     ./alacritty
+    ./vesktop
   ];
 }

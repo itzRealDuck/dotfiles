@@ -27,6 +27,9 @@
     catppuccin = {
       url = "github:catppuccin/nix";
     };
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.0.0";
+    };
   };
 
   outputs = {
