@@ -1,7 +1,9 @@
 {
   imports = [
-    ../../../modules/HomeConfig/alacritty
-    ../../../modules/HomeConfig/ags
+    ../../../modules/HomeConfig
     ./programs
+    ./theming
+    ./pkgs
+    ./etc
   ];
 }

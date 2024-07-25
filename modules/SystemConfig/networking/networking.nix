@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  networking.hostName = "nixos"; # hostname
+  networking.hostName = "itzreakduck"; # hostname
   #  networking.wireless.enable = true; enable wirless
   networking.networkmanager.enable = true;
   # extra options

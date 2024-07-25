@@ -1,15 +1,27 @@
-{...}: {
-  imports = [./options.nix];
-  programs.vesktop = {
-    enable = true;
-    settings = {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  cfg = config.option.programs.vesktop;
+  json = pkgs.formats.json {};
+  inherit (lib) mkEnableOption mkIf;
+in {
+  options.option.programs.vesktop = {
+    enable = mkEnableOption "Enable Vesktop";
+  };
+
+  config = mkIf cfg.enable {
+    home.packages = with pkgs; [vesktop];
+    xdg.configFile."vesktop/settings.json".source = json.generate "settings.json" {
       minimizeToTray = "on";
       discordBranch = "stable";
       arRPC = "on";
       splashColor = "oklab(0.921539 -0.00903007 -0.00387452)";
       splashBackground = "oklab(0.254186 -0.0027893 -0.0239889)";
     };
-    extraConfig = {
+    xdg.configFile."vesktop/settings/settings.json".source = json.generate "settings.json" {
       autoUpdate = false;
       autoUpdateNotification = true;
       cloud = {

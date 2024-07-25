@@ -1,15 +1,11 @@
 {
   imports = [
-    ./nvf.nix
     ./theming
-    ./ags.nix
-    ./nixpkgsconf.nix
-    ./pkgs
-    ./homefile.nix
-    ./sesvars.nix
-    ./fastfetch.nix
+    ./ags
+    ./nvf
     ./shells
-    #./alacritty
     ./vesktop
+    ./alacritty
+    ./fastfetch
   ];
 }
