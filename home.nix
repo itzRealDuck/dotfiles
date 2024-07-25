@@ -9,6 +9,7 @@
   # manage.
   imports = [
     ./modules/HomeConfig
+    ./hosts
   ];
   home = {
     username = "itzreakduck";

@@ -9,7 +9,7 @@
     ./sesvars.nix
     ./fastfetch.nix
     ./shells
-    ./alacritty
+    #./alacritty
     ./vesktop
   ];
 }

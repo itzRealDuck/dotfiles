@@ -1,5 +1,6 @@
 {
   imports = [
-    ./alacritty.nix
+    #  ./alacritty.nix
+    ./options.nix
   ];
 }
