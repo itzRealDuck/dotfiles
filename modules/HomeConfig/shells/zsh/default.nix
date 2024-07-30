@@ -5,10 +5,14 @@
   ...
 }: let
   cfg = config.option.programs.zsh;
-  inherit (lib) mkEnableOption mkIf;
+  inherit (lib) mkEnableOption mkIf mkOption mkMerge;
 in {
   options.option.programs.zsh = {
     enable = mkEnableOption "Enable Zsh";
+    aliases = mkOption {
+      default = {
+      };
+    };
   };
   config = mkIf cfg.enable {
     programs.zsh = {
@@ -18,11 +22,15 @@ in {
         enable = true;
         highlight = "fg=#228B22,bold,underline";
       };
-      shellAliases = {
-        fs = "fastfetch";
-        nf = "neofetch";
-        set-volume = "wpctl set-volume @DEFAULT_SINK@";
-      };
+      shellAliases = mkMerge [
+        {
+          fs = "fastfetch";
+          nf = "neofetch";
+          set-volume = "wpctl set-volume @DEFAULT_SINK@";
+        }
+
+        cfg.aliases
+      ];
     };
   };
 }

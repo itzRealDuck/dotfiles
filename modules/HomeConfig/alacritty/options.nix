@@ -7,6 +7,7 @@
 }: let
   cfg = config.option.programs.alacritty;
   inherit (lib) mkIf mkMerge mkEnableOption types mkOption;
+  tomlFormat = pkgs.formats.toml {};
 in {
   options.option.programs.alacritty = {
     enable = mkEnableOption "Enable Alacritty";
@@ -22,6 +23,10 @@ in {
         type = types.str;
         default = "macchiato";
       };
+    };
+    config = mkOption {
+      type = tomlFormat.type;
+      default = {};
     };
   };
   config = mkMerge [
@@ -44,6 +49,7 @@ in {
           enable = cfg.catppuccin.enable;
           flavor = cfg.catppuccin.flavor;
         };
+        settings = cfg.config;
       };
     })
   ];

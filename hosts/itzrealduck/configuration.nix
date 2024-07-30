@@ -11,7 +11,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./modules/SystemConfig
+    ../../modules/SystemConfig
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

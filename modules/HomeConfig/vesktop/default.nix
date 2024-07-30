@@ -278,7 +278,7 @@ in {
         oneko = {enabled = false;};
         petpet = {enabled = false;};
       };
-      themeLinks = ["https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css"];
+      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css"];
       transparent = false;
       useQuickCss = true;
       winCtrlQ = false;

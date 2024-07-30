@@ -61,7 +61,7 @@
     picom
     (pkgs.callPackage ./derivations/appimages {}).cheatbreaker
     (pkgs.callPackage ./derivations/appimages {}).badlion
-    inputs.alejandra.defaultPackage.${pkgs.system}
+    inputs.alejandra.defaultPackage.${pkgs.stdenv.hostPlatform.system}
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
