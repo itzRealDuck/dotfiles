@@ -35,10 +35,6 @@
   outputs = {
     self,
     nixpkgs,
-    home-manager,
-    nvf,
-    catppuccin,
-    ags,
     ...
   } @ inputs: {
     inherit (nixpkgs) lib;
