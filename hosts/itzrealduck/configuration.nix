@@ -12,6 +12,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/SystemConfig
+    ./nixos
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
