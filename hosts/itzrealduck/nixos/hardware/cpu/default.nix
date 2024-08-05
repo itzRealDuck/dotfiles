@@ -1,0 +1,3 @@
+{...}: {
+  option.hardware.cpu = "intel";
+}

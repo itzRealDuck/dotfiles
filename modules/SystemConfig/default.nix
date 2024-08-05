@@ -1,6 +1,6 @@
 {
   imports = [
-    ./boot.nix
+    ./boot
     ./networking
     ./locales
     ./displayManagers
@@ -13,6 +13,5 @@
     ./overlays
     ./gaming
     ./nh.nix
-    ./graphics.nix
   ];
 }
