@@ -1,5 +1,6 @@
 {
   imports = [
-    # ./awesome.nix
+    ./gpu
+    ./cpu
   ];
 }

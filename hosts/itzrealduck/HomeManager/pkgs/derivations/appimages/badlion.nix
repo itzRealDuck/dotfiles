@@ -10,6 +10,6 @@ appimageTools.wrapType2 {
 
   src = fetchurl {
     url = "https://client-updates-cdn77.badlion.net/BadlionClient";
-    hash = "sha256-9elNLSqCO21m1T2D+WABKotD9FfW3FrcOxbnPdyVd+w=";
+    hash = "sha256-yR/Ko8moUWDVyZ9tKj7ZF8KYpcDtbwMvel/UBWNgehU=";
   };
 }
