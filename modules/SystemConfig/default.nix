@@ -4,14 +4,12 @@
     ./networking
     ./locales
     ./displayManagers
-    ./extraServices
-    ./sound.nix
-    ./virtualization
     ./users
-    ./nixpkgsopt.nix
-    ./syspkgs
-    ./overlays
+    ./sound
+    ./nh
+    ./virtualization
     ./gaming
-    ./nh.nix
+    ./hardware
+    ./extraServices
   ];
 }

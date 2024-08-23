@@ -1,16 +1,17 @@
 {
   imports = [
-    ../../../modules/SystemConfig/boot
-    ../../../modules/SystemConfig/virtualization
-    ../../../modules/SystemConfig/hardware
-    ../../../modules/SystemConfig/networking
-    ../../../modules/SystemConfig/gaming
-    ../../../modules/SystemConfig/extraServices
+    ../../../modules/SystemConfig
     ./boot
     ./virtualization
     ./hardware
     ./networking
     ./gaming
     ./services
+    ./display
+    ./syspkgs
+    ./etc
+    ./nh
+    ./sound
+    ./users
   ];
 }

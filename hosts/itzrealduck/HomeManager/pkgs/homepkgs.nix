@@ -62,6 +62,7 @@
     (pkgs.callPackage ./derivations/appimages {}).cheatbreaker
     (pkgs.callPackage ./derivations/appimages {}).badlion
     inputs.alejandra.defaultPackage.${pkgs.stdenv.hostPlatform.system}
+    flatpak
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.

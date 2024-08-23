@@ -5,6 +5,7 @@ in {
     specialArgs = {inherit inputs lib;};
     system = null;
     modules = [
+      {imports = [../options];}
       ./itzrealduck/configuration.nix
       inputs.catppuccin.nixosModules.catppuccin
       inputs.home-manager.nixosModules.home-manager
