@@ -1,0 +1,3 @@
+{...}: {
+  option.gaming.enable = true;
+}

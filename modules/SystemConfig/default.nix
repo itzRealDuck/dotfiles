@@ -1,18 +1,15 @@
 {
   imports = [
-    ./boot.nix
+    ./boot
     ./networking
     ./locales
     ./displayManagers
-    ./extraServices
-    ./sound.nix
-    ./virtualization
     ./users
-    ./nixpkgsopt.nix
-    ./syspkgs
-    ./overlays
+    ./sound
+    ./nh
+    ./virtualization
     ./gaming
-    ./nh.nix
-    ./graphics.nix
+    ./hardware
+    ./extraServices
   ];
 }

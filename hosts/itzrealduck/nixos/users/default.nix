@@ -1,0 +1,5 @@
+{...}: {
+  option.users = {
+    name = "itzreakduck";
+  };
+}

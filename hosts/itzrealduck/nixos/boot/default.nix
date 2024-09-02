@@ -1,0 +1,3 @@
+{...}: {
+  option.boot.enable = true;
+}

@@ -35,50 +35,9 @@
   outputs = {
     self,
     nixpkgs,
-    home-manager,
-    nvf,
-    catppuccin,
-    ags,
     ...
-  } @ inputs: let
-    system = null;
-
-    lib = nixpkgs.lib;
-  in {
-    nixosConfigurations = {
-      itzreakduck = lib.nixosSystem {
-        specialArgs = {inherit inputs lib;};
-        inherit system;
-        modules = [
-          ./configuration.nix
-          catppuccin.nixosModules.catppuccin
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = false;
-            home-manager.useUserPackages = true;
-            home-manager.users.itzreakduck.imports = [
-              ./home.nix
-              nvf.homeManagerModules.default
-              catppuccin.homeManagerModules.catppuccin
-              ags.homeManagerModules.default
-            ];
-            home-manager.extraSpecialArgs = {
-              inherit inputs;
-            };
-          }
-          {nixpkgs.hostPlatform = "x86_64-linux";}
-        ];
-      };
-    };
-
-    homeConfigurations.itzreakduck = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-      modules = [
-        nvf.homeManagerModules.default
-        catppuccin.homeManagerModules.catppuccin
-        ./home.nix
-      ];
-    };
+  } @ inputs: {
+    inherit (nixpkgs) lib;
+    nixosConfigurations = import ./hosts {inherit inputs;};
   };
 }
